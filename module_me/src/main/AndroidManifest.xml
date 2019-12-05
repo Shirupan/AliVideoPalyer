@@ -1,0 +1,37 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xx.module.me">
+
+    <application>
+
+
+        <activity
+            android:name="com.xx.module.me.view.MeInfoEditActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.xx.module.me.view.InitNickNameActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.xx.module.me.view.SettingActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.xx.module.me.view.MyHistoryActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xx.module.me.view.MyPraiseActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.xx.module.me.view.MyCollectionActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+    </application>
+</manifest>

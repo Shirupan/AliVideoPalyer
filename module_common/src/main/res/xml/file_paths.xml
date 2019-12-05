@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-files-path
+        name="download"
+        path="Download" />
+    <root-path
+        name="sm"
+        path="" />
+    <external-files-path
+        name="extfiles"
+        path="autoupdatecache/" />
+    <external-cache-path
+        name="extcachs"
+        path="autoupdatecache/" />
+    <cache-path
+        name="intcachs"
+        path="autoupdatecache/" />
+</paths>

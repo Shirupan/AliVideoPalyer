@@ -1,0 +1,68 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 28
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+
+    }
+
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
+    api project(":lib_base")
+    api project(":lib_util")
+    api project(":lib_db")
+    api project(":lib_net")
+    api project(":lib_third_share_pay")
+    api project(":module_sms")
+    api project(":lib_push")
+
+
+    api rootProject.ext.real_dependencies.MagicIndicator
+
+    api rootProject.ext.real_dependencies.umeng
+    api rootProject.ext.real_dependencies.RxCache
+    api rootProject.ext.real_dependencies.Jolyglot_gson, {
+        exclude group: 'com.google.code.gson'
+    }
+    api rootProject.ext.real_dependencies.ultra_ptr, { exclude group: 'com.android.support' }
+
+    api rootProject.ext.real_dependencies.router
+
+    api rootProject.ext.real_dependencies.ucrop
+    api rootProject.ext.real_dependencies.matisse
+
+    api rootProject.ext.real_dependencies.banner
+
+
+
+    api rootProject.ext.real_dependencies.jiecaovideoplayer, {
+        exclude group: 'com.android.support'
+    }
+}

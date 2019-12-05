@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#FF1A78F4</color>-->
+    <color name="colorPrimary">#FFDD00</color>
+        <color name="colorPrimaryDark">#f2b906</color>
+    <color name="colorAccent">#ffffff00</color>
+    <color name="color_ee9474">#ee9474</color>
+
+    <color name="color_8d">#8d8d8d</color>
+    <color name="color_aaaba5">#aaaba5</color>
+    <color name="color_44444">#ee444444</color>
+    <color name="line_dd">#dddddd</color>
+    <color name="bg_ea">#eaeaea</color>
+    <color name="bg_f3f2f0">#f3f2f0</color>
+    <color name="bg_f4f5ed">#f4f5ed</color>
+    <color name="text_66">#666666</color>
+    <color name="text_f7">#f7f7f7</color>
+    <color name="text_60">#606060</color>
+    <color name="text_aa">#aaaaaa</color>
+    <color name="text_33">#333333</color>
+    <color name="text_4b">#4b4b4b</color>
+    <color name="text_23">#232323</color>
+    <color name="text_75">#757575</color>
+    <color name="text_52">#525252</color>
+    <color name="text_3a">#3a3a3a</color>
+    <color name="text_6b">#6b6b6b</color>
+    <color name="text_ba">#bababa</color>
+    <color name="text_c6">#c6c6c6</color>
+    <color name="text_a8">#a8a8a8</color>
+    <color name="text_84">#848484</color>
+    <color name="text_7a">#7a7a7a</color>
+    <color name="text_b4">#b4b4b4</color>
+    <color name="text_4c">#4c4c4c</color>
+    <color name="text_59">#595959</color>
+    <color name="text_5c">#5c5c5c</color>
+    <color name="text_b2">#b2b2b2</color>
+    <color name="text_cfd0d1">#cfd0d1</color>
+    <color name="text_c9c6c5">#c9c6c5</color>
+    <color name="text_green">#FF26C128</color>
+
+    <color name="f4f4f4">#f4f4f4</color>
+    <color name="color_66">#666666</color>
+    <color name="color_813f08">#813f08</color>
+    <color name="color_f47a27">#f47a27</color>
+    <color name="color_f78d3e">#f78d3e</color>
+    <color name="color_ff576f">#ff576f</color>
+    <color name="color_e8">#e8e8e8</color>
+    <color name="color_divider_f7">#f7f7f7</color>
+    <color name="color_f2">#f2f2f2</color>
+    <color name="color_f5f4ef">#f5f4ef</color>
+    <color name="color_cece_sub1">#fcefdb</color>
+    <color name="color_cece_sub2">#fff0f0</color>
+    <color name="line_da">#dadada</color>
+    <color name="color_ques_item_f2">#f2b906</color>
+    <color name="color_ques_item_f3">#FF8E127D</color>
+
+    <color name="color_ques_item_f7">#f77721</color>
+    <color name="color_ques_item_e8">#e83e3e</color>
+    <color name="color_table_bg">#FFF2BF17</color>
+
+    <color name="item_devider">#F2F2F2</color>
+
+    <color name="text_c1">#c1c1c1</color>
+    <color name="text_a4">#a4a4a4</color>
+    <color name="text_606162">#606162</color>
+    <color name="text_adaaaf">#adaaaf</color>
+    <color name="text_80333333">#a5333333</color>
+    <color name="text_99">#999999</color>
+    <color name="text_91">#919191</color>
+    <color name="text_white">#fff</color>
+    <color name="text_6d">#6d6d6d</color>
+    <color name="text_70">#707070</color>
+
+
+    <color name="black_b2">#b2000000</color>
+    <color name="action_bar_divider">#ffdcdee5</color>
+    <color name="gray_name">#ffaaaaaa</color>
+    <color name="yellow">#ffffff00</color>
+    <color name="main_color">#fffee834</color>
+    <color name="main_color2">#ffffde00</color>
+    <color name="black">#000</color>
+    <color name="recharge_timeout">#ff7a7a7a</color>
+    <color name="recharge_red">#ffff774d</color>
+    <color name="vip_red">#ffff1c77</color>
+    <color name="light_gray">#ffa3aab1</color>
+    <color name="main_red">#ffff1c77</color>
+    <color name="white_transparent">#00ffffff</color>
+    <color name="gray">#ff464646</color>
+    <color name="common_bg">#ffe6e6eb</color>
+    <color name="common_btn_white_normal">@color/common_white</color>
+    <color name="common_white">#ffffffff</color>
+    <color name="defalut_item_text_color">#ff2b2d3a</color>
+    <color name="my_fragment_top_color">#ffb1b1ca</color>
+    <color name="pay_bg">#ffe7e7ef</color>
+    <color name="pay_bg_7f">#7fe7e7ef</color>
+    <color name="pay_safe">#ffadadb8</color>
+    <color name="warn_bg_1">#FFF44425</color>
+    <color name="warn_bg_2">#FFC2351D</color>
+    <color name="vip_red_7f">#7fff1c77</color>
+    <color name="bg_black_bb">#bb000000</color>
+    <color name="white_bg_pressed">#ffeeeeee</color>
+    <color name="black_cf">#cf000000</color>
+    <color name="sms_bg_1">#FF1A78F4</color>
+    <color name="sms_bg_2">#FF0E53AF</color>
+    <color name="Trans">#88000000</color>
+    <color name="live_info">#ff23233a</color>
+    <color name="light_yellow">#fffdcb01</color>
+    <color name="red_gp">#fff32329</color>
+    <color name="green">#FF19A136</color>
+
+
+    <color name="transparent">#0000</color>
+</resources>

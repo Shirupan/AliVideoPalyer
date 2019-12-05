@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1px"
+    android:background="?attr/smPageDarkBackground"
+    android:foreground="?attr/selectableItemBackground"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/zan_item_left_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/collection_item_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/zan_item_ic_layout"
+            android:layout_width="108dp"
+            android:layout_height="65dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/zan_item_ic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_default_vertical" />
+
+            <TextView
+                android:id="@+id/zan_item_time"
+                style="@style/text_time_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:layout_margin="2dp"
+                android:text="00:00"
+                android:textColor="@color/line_f2" />
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/zan_item_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:textColor="?attr/smTitleColor"
+        app:layout_constraintLeft_toRightOf="@+id/zan_item_left_layout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/zan_item_left_layout" />
+
+    <TextView
+        android:id="@+id/zan_item_read_count"
+        style="@style/text_time_tip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:lines="1"
+        app:layout_constraintLeft_toLeftOf="@+id/zan_item_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zan_item_title" />
+
+
+</android.support.constraint.ConstraintLayout>

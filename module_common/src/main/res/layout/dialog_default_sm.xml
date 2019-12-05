@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="@drawable/layout_round_theme_background_color"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingTop="15dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="10dp">
+
+
+    <!-- 标题 -->
+
+    <TextView
+        android:id="@+id/dialog_sm_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:paddingRight="20dp"
+        android:text="提示"
+        android:textColor="?attr/smTitleColor"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dialog_sm_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="left"
+        android:lineSpacingMultiplier="1.3"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="message"
+        android:textColor="?attr/smContentColor"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_gravity="right"
+        android:id="@+id/dialog_sm_bottom_2btn_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+
+            android:id="@+id/dialog_sm_negative"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_toLeftOf="@id/dialog_sm_positive"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="取消"
+            android:textColor="?attr/smTipColor"
+            android:textSize="15sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/dialog_sm_positive"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="确定"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+</LinearLayout>

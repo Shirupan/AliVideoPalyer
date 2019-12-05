@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="RedTheme" parent="SmBaseTheme" />
+    <!--白日主题-->
+    <style name="SmTheme.Day" parent="SmBaseTheme" />
+    <!--黑夜主题-->
+    <style name="SmTheme.Night" parent="SmBaseTheme">
+        <item name="smToolbarBackgroundColor">@color/color_toolbar_bg_night</item>
+        <item name="smPageBackground">@color/text_2d</item>
+        <item name="smPageDarkBackground">@color/night_bg_dark</item>
+        <item name="smToolbarTitleColor">@color/text_db</item>
+        <item name="smTitleColor">@color/text_db</item>
+        <item name="smContentColor">@color/text_99</item>
+        <item name="smSubHeadColor">@color/text_6e</item>
+        <item name="smTipColor">@color/text_66</item>
+        <item name="smLineColor">@color/text_2d</item>
+    </style>
+
+
+    <style name="transparent" parent="baseTransparent" />
+
+    <style name="baseTransparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+
+        <item name="smToolbarBackgroundColor">@color/color_toolbar_bg</item>
+        <item name="smToolbarTitleColor">@color/text_33</item>
+    </style>
+
+    <style name="SmBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorPrimary">@color/app_main_color</item>
+        <item name="colorPrimaryDark">@color/app_main_color_pressed</item>
+        <item name="colorAccent">@color/app_main_color_accent</item>
+        <item name="android:configChanges">orientation|screenSize</item>
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless</item>
+
+        <item name="smToolbarBackgroundColor">@color/color_toolbar_bg</item>
+        <item name="smPageBackground">@color/line_f2</item>
+        <item name="smPageDarkBackground">@android:color/white</item>
+        <item name="smToolbarTitleColor">@color/text_33</item>
+        <item name="smTitleColor">@color/text_33</item>
+        <item name="smContentColor">@color/text_33</item>
+        <item name="smSubHeadColor">@color/text_66</item>
+        <item name="smTipColor">@color/text_99</item>
+        <item name="smLineColor">@color/line_dd</item>
+    </style>
+
+
+</resources>

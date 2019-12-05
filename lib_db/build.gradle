@@ -1,0 +1,36 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 28
+
+
+    defaultConfig {
+
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api rootProject.ext.real_dependencies.support_v4
+    api rootProject.ext.real_dependencies.RxCache
+    api rootProject.ext.real_dependencies.Jolyglot_gson, {
+        exclude group: 'com.google.code.gson'
+    }
+    api rootProject.ext.real_dependencies.room_runtime
+    api rootProject.ext.real_dependencies.room_rxjava
+    kapt rootProject.ext.real_dependencies.room_kapt
+    implementation rootProject.ext.real_dependencies.gson
+}

@@ -1,0 +1,76 @@
+//---所有的modules的公共依赖
+ext {
+    android = [compileSdkVersion: 28,
+               buildToolsVersion: '28.0.3',
+               applicationId    : "com.xx.xx",
+               minSdkVersion    : 21,
+               targetSdkVersion : 28,
+               versionCode      : 11,
+               versionName      : "2.0.1",
+    ]
+
+    dimension_default = 'default'
+    flavorDimensions = dimension_default
+
+    defaultHolder = [
+            BaiduMobAd_APP_ID_VALUE: "",
+            //QQ配置信息
+            QQ_APPID_VALUE         : "",
+            QQ_SECRET_VALUE        : "",
+            //微信配置信息
+            WX_APPID_VALUE         : "",
+            WX_SECRET_VALUE        : "",
+            //微博配置信息
+            WB_APPID_VALUE         : "",
+            WB_SECRET_VALUE        : "",
+            //友盟配置信息
+            UMENG_APPID            : "",
+            //腾讯bugly配置信息
+            BUYLG_APP_ID           : "",
+            BUYLG_APP_KEY          : "",
+            //腾讯信鸽推送（可部分厂家系统级推送）
+            XG_ACCESS_ID           : "",
+            XG_ACCESS_KEY          : "",
+            //华为推送appid
+            HW_APPID               : "",
+            //小米推送配置信息
+            XIAOMI_PUSH_APPID      : "",
+            XIAOMI_PUSH_APPKEY     : "",
+            //魅族推送配置信息
+            MEIZU_PUSH_APPID       : "",
+            MEIZU_PUSH_APPKEY      : "",
+            //应用包名（推送配置需要）
+            PACKAGE_NAME           : "com.xx.xx",]
+
+    //主包配置
+    offical = {
+        dimension dimension_default
+        buildConfigField "boolean", "LOG_DEBUG", "true"
+        resValue "string", "app_name_build", "叉叉视频"
+        versionNameSuffix "-debug"
+        minifyEnabled false
+        zipAlignEnabled false
+        shrinkResources false
+        manifestPlaceholders = [UMENG_CHANNEL_KEY      : "",
+                                BaiduMobAd_APP_ID_VALUE: ""]
+
+    }
+    development = {
+        ndk { abiFilters "armeabi-v7a" }
+        minSdkVersion 21  //避免legacy multidex带来的编译性能消耗(选值21以上)
+        dimension dimension_default
+        resValue "string", "app_name_build", "叉叉视频"
+        manifestPlaceholders = [
+                DEFAULT_CHANNEL_VALUE: "dev"
+        ]
+    }
+
+    signing_sm = {
+        storeFile file('')
+        storePassword ''
+        keyAlias ''
+        keyPassword ''
+    }
+}
+
+

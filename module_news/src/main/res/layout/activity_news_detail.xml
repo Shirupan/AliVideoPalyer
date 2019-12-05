@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+    <include
+        android:id="@+id/sm_toolbar_layout"
+        layout="@layout/layout_toolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/news_detail_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?smPageDarkBackground"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:onClick="onShoucangClick"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/news_detail_shjoucang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/icon_main_shouchang"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="?attr/smTipColor"
+                android:textSize="15sp" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="?attr/smLineColor" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:onClick="onZanClick"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/news_detail_zan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/icon_main_zan"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="?attr/smTipColor"
+                android:textSize="15sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?attr/smPageDarkBackground"
+        app:layout_constraintBottom_toTopOf="@+id/news_detail_bottom_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sm_toolbar_layout">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/news_detail_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <TextView
+                android:id="@+id/news_detail_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:lineSpacingMultiplier="1.1"
+                android:text="标题"
+                android:textColor="?attr/smTitleColor"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/news_detail_time"
+                style="@style/text_time_tip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:text="00:00"
+                app:layout_constraintLeft_toLeftOf="@+id/news_detail_title"
+                app:layout_constraintRight_toLeftOf="@+id/news_detail_read_count"
+                app:layout_constraintTop_toBottomOf="@+id/news_detail_title" />
+
+            <TextView
+                android:id="@+id/news_detail_read_count"
+                style="@style/text_time_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="11:00"
+                app:layout_constraintBottom_toBottomOf="@+id/news_detail_time"
+                app:layout_constraintLeft_toRightOf="@+id/news_detail_time"
+                app:layout_constraintRight_toRightOf="@+id/news_detail_title" />
+
+            <View
+                android:id="@+id/news_detail_top_line"
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_marginTop="15dp"
+                android:background="?attr/smLineColor"
+                app:layout_constraintLeft_toLeftOf="@+id/news_detail_time"
+                app:layout_constraintRight_toRightOf="@+id/news_detail_read_count"
+                app:layout_constraintTop_toBottomOf="@+id/news_detail_read_count" />
+
+            <com.tencent.smtt.sdk.WebView
+                android:id="@+id/news_detail_web"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/news_detail_top_line" />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_black_60" />
+
+    <LinearLayout
+        android:id="@+id/upgrade_info_linear"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button_round_white"
+        android:clickable="false"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_dialog_update"
+            android:tag="beta_upgrade_banner" />
+
+
+        <TextView
+            android:id="@+id/tips_title_txt"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:tag="beta_title"
+            android:text="新版本（6.5.0）"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tips_info_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fadeScrollbars="false"
+            android:maxHeight="200dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:scrollbars="vertical"
+            android:tag="beta_upgrade_info"
+            android:text=""
+            android:textColor="@color/text_66"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tips_content_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fadeScrollbars="false"
+            android:maxHeight="200dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:scrollbars="vertical"
+            android:tag="beta_upgrade_feature"
+            android:text="更新日志"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="温馨提示: 为不影响正常使用，建议马上升级。"
+            android:textColor="@color/upgrade_tips_color"
+            android:textSize="12sp" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="10dp"
+            android:src="@color/line_dd" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/to_cancel_txt"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:tag="beta_cancel_button"
+                android:text="取消"
+                android:textColor="@color/text_99"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/line_dd" />
+
+            <TextView
+                android:id="@+id/to_upgrade_txt"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:tag="beta_confirm_button"
+                android:text="马上升级"
+                android:textColor="#e52c2c"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,51 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: "configuration.gradle"
+apply from: "dependencies.gradle"
+
+buildscript {
+
+    ext.kotlin_version = '1.3.31'
+    ext.support_version = "28.0.0"
+
+
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url "https://jitpack.io" }
+        google()
+        jcenter()
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        maven { url "https://jitpack.io" }
+        google()
+        jcenter()
+    }
+}
+
+//关闭项目变更后的lint检查
+tasks.whenTaskAdded { task ->
+    if (task.name.contains("lint")
+            //如果instant run不生效，把clean这行干掉
+//              || task.name.equals("clean")
+            //如果项目中有用到aidl则不可以舍弃这个任务
+            || task.name.contains("Aidl")
+            //用不到测试的时候就可以先关闭
+            || task.name.contains("mockableAndroidJar")
+            || task.name.contains("UnitTest")
+            || task.name.contains("AndroidTest")
+            //用不到NDK和JNI的也关闭掉
+            || task.name.contains("Ndk")
+    // || task.name.contains("Jni")
+    ) {
+        task.enabled = false
+    }
+}

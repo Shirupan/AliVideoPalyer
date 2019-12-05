@@ -1,0 +1,10 @@
+include ':app', ':app_dependency', ':module_video', ':module_me', ':module_news',
+        ':lib_base',
+        ':lib_db',
+        ':lib_util',
+        ':lib_push',
+        ':lib_third_share_pay',
+        ':lib_net',
+        ':lib_update',
+        ':module_sms',
+        ':module_common'

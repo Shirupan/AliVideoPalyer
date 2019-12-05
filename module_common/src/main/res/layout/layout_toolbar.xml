@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sm_toolbar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_height_size"
+    android:background="?attr/smToolbarBackgroundColor">
+
+
+    <ImageView
+        android:id="@+id/toolbar_left_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="?attr/selectableItemBackground"
+        android:paddingLeft="8dp"
+        android:paddingTop="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="12dp"
+        android:tint="@color/text_33"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/toolbar_left_ib_2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/toolbar_left_ib"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@id/toolbar_left_ib"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close_black_24dp" />
+
+
+    <ImageButton
+        android:id="@+id/toolbar_right_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:background="?attr/selectableItemBackground"
+        android:minWidth="30dp"
+        android:scaleType="centerInside"
+        android:tint="?attr/smToolbarTitleColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_more_vert_black_24dp" />
+
+
+    <Button
+        android:id="@+id/btn_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/selector_toolbar_right_btn"
+        android:minWidth="60dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="发布"
+        android:textColor="@color/app_main_color"
+        android:textSize="13sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_topbar_title"
+        style="@style/RedTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:text=" "
+        android:textColor="@color/text_33"
+        android:textSize="@dimen/toolbar_title_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
+
+

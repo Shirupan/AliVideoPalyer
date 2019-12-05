@@ -1,0 +1,144 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="splash_view" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/icon_splash</item>
+    </style>
+
+    <style name="NormalDialog" parent="@android:style/Theme.DeviceDefault.Dialog.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+    <style name="tab_menu_item">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabBackground">@color/text_white</item>
+        <item name="tabSelectedTextColor">@color/black</item>
+        <item name="tabTextColor">@color/gray</item>
+
+    </style>
+
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">@dimen/text_14_sp</item>
+    </style>
+
+
+    <!--<style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">-->
+    <!--<item name="tabTextAppearance">@style/MyCustomTextAppearance</item>-->
+    <!--</style>-->
+
+    <!--<style name="MyCustomTextAppearance" parent="TextAppearance.Design.Tab">-->
+    <!--<item name="textAllCaps">false</item>-->
+    <!--<item name="tabIndicatorColor">@color/color_ff576f</item>-->
+    <!--<item name="tabBackground">@color/color_table_bg</item>-->
+    <!--<item name="tabSelectedTextColor">@color/color_ff576f</item>-->
+    <!--<item name="tabTextColor">@color/text_white</item>-->
+    <!--</style>-->
+    <style name="gray16">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <style name="SelectDialog" parent="@android:style/Theme.Dialog">
+        <!--//Dialog的windowFrame框为无-->
+        <item name="android:windowFrame">@null</item>
+        <!--//是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--//是否半透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--//是否显示title-->
+        <item name="android:windowNoTitle">true</item>
+        <!--//设置dialog的背景-->
+        <item name="android:background">@android:color/transparent</item>
+        <!--//显示区域背景是否透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--//就是用来控制灰度的值，当为1时，界面除了我们的dialog内容是高亮显示的，dialog以外的区域是黑色的，完全看不到其他内容，系统的默认值是0.5-->
+        <item name="android:backgroundDimAmount">0.5</item>
+        <!--//显示区域以外是否使用黑色半透明背景-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!--自定义dialog背景全透明无边框theme -->
+    <style name="MyDialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">false</item>
+
+    </style>
+
+    <!-- 自定义dialog样式 -->
+    <style name="DialogTheme" parent="android:style/Theme.Dialog">
+        <!--//Dialog的windowFrame框为无-->
+        <item name="android:windowFrame">@null</item>
+        <!--//是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--//是否半透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--//是否显示title-->
+        <item name="android:windowNoTitle">true</item>
+        <!--//设置dialog的背景-->
+        <item name="android:background">@android:color/transparent</item>
+        <!--//显示区域背景是否透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--//就是用来控制灰度的值，当为1时，界面除了我们的dialog内容是高亮显示的，dialog以外的区域是黑色的，完全看不到其他内容，系统的默认值是0.5-->
+        <item name="android:backgroundDimAmount">0.5</item>
+        <!--//显示区域以外是否使用黑色半透明背景-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--全屏-->
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+    <style name="ThirdHint1">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">#ff151414</item>
+    </style>
+
+    <!--透明的Activity-->
+    <style name="myTransparent" parent="FullScreenTheme">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
+
+    <!--全屏加透明-->
+    <style name="TranslucentFullScreenTheme" parent="FullScreenTheme">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <!--全屏-->
+    <style name="FullScreenTheme" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">@color/app_main_color</color>
+    <color name="colorPrimaryDark">@color/app_main_color_pressed</color>
+    <color name="colorAccent">@color/app_main_color_accent</color>
+
+
+    <color name="app_main_color_accent">#ff6c6c</color>
+    <color name="app_main_color">#f44d4d</color>
+    <color name="app_main_color_pressed">#e12929</color>
+
+
+    <color name="color_toolbar_bg">@color/colorPrimary</color>
+    <color name="color_toolbar_bg_night">@color/colorPrimary</color>
+    <color name="text_2d">#2d2d2d</color>
+    <color name="text_db">#dbdbdb</color>
+    <color name="text_99">#999999</color>
+    <color name="text_6e">#6e6e6e</color>
+    <color name="text_66">#666666</color>
+    <color name="text_33">#333333</color>
+    <color name="night_bg_dark">#1E1E1E</color>
+    <color name="line_f2">#f2f2f2</color>
+    <color name="line_dd">#dddddd</color>
+
+    <color name="translucent_white_background_20">#14ffffff</color>
+    <color name="translucent_white_background_60">#c2ffffff</color>
+
+    <color name="translucent_background_20">#14000000</color>
+    <color name="translucent_background_40">#60000000</color>
+    <color name="translucent_background_60">#c2000000</color>
+    <color name="translucent_background_e7">#e7000000</color>
+    <color name="transparent_black_60">#60000000</color>
+    <color name="text_red">#f44d4d</color>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="information_share_platform_wechat_name">微信好友</string>
+    <string name="information_share_platform_wechat_circle_name">微信朋友圈</string>
+    <string name="information_share_platform_qq_name">QQ</string>
+    <string name="information_share_platform_qq_zone_name">QQ空间</string>
+    <string name="information_share_platform_sina_weibo_name">新浪微博</string>
+
+    <!-- 资讯分享平台数组 -->
+    <string-array name="information_share_platform_names">
+        <item>@string/information_share_platform_wechat_name</item>
+        <item>@string/information_share_platform_wechat_circle_name</item>
+        <item>@string/information_share_platform_qq_name</item>
+        <item>@string/information_share_platform_qq_zone_name</item>
+        <item>@string/information_share_platform_sina_weibo_name</item>
+    </string-array>
+
+
+
+    <string-array name="information_share_platform_icons">
+        <item>@drawable/baseproject_share_wechat_selector</item>
+        <item>@drawable/baseproject_share_wechat_friends_selector</item>
+        <item>@drawable/baseproject_share_qq_selector</item>
+        <item>@drawable/baseproject_share_qzone_selector</item>
+        <item>@drawable/baseproject_share_weibo_selector</item>
+    </string-array>
+</resources>

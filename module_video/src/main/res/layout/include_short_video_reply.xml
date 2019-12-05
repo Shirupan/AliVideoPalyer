@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mrkj.base.views.widget.custom.DragParentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/short_video_reply_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="200dp"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/button_round_theme_bg_dark_stroke_line"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/short_video_reply_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_arrow_back_black_24dp"
+                    android:tint="?attr/smTipColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="返回全部评论"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/short_video_reply_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="共%s条评论"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/short_video_reply_cancel"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_close_black_24dp"
+                android:tint="?attr/smTipColor" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/short_video_reply_all_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/short_video_reply_sub_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/short_video_reply_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/line_f2"
+                android:gravity="center"
+                android:text="快来第一个评论吧~"
+                android:textColor="@color/text_66"
+                android:textSize="13sp" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/short_video_reply_click_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/line_f2"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/add_icon_face_normal" />
+
+            <TextView
+                android:id="@+id/short_video_reply_click_hint"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_theme_bg_dark"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="回复(新楼层):"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</com.mrkj.base.views.widget.custom.DragParentFrameLayout>

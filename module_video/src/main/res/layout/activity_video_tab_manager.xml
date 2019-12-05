@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/smPageBackground"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/sm_toolbar_layout"
+        layout="@layout/layout_toolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/video_tab_manager_tip_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14sp"
+        android:layout_marginTop="17dp"
+        android:text="类别管理"
+        android:textColor="?attr/smTitleColor"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sm_toolbar_layout" />
+
+    <ImageView
+        android:id="@+id/video_tab_manager_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="14dp"
+        android:background="?attr/selectableItemBackground"
+        android:tint="?attr/smSubHeadColor"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sm_toolbar_layout"
+        app:srcCompat="@drawable/ic_close_black_24dp" />
+
+    <View
+        android:id="@+id/video_tab_manager_line_1"
+        android:layout_width="0dp"
+        android:layout_height="1px"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="14dp"
+        android:background="?attr/smLineColor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/video_tab_manager_cancel" />
+
+
+    <TextView
+        android:id="@+id/video_tab_manager_tip_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="我的类别"
+        android:textColor="?attr/smTitleColor"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/video_tab_manager_tip_1"
+        app:layout_constraintTop_toBottomOf="@+id/video_tab_manager_line_1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="长按可调整类别顺序"
+        android:textColor="?attr/smSubHeadColor"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/video_tab_manager_tip_2"
+        app:layout_constraintLeft_toRightOf="@+id/video_tab_manager_tip_2"
+        app:layout_constraintTop_toTopOf="@+id/video_tab_manager_tip_2" />
+
+    <FrameLayout
+        android:id="@+id/video_tab_manager_my_rv_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@+id/video_tab_manager_tip_2"
+        app:layout_constraintRight_toRightOf="@+id/video_tab_manager_cancel"
+        app:layout_constraintTop_toBottomOf="@+id/video_tab_manager_tip_2">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/video_tab_manager_my_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/video_tab_manager_my_rv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="正在加载中..."
+            android:textColor="?attr/smContentColor" />
+    </FrameLayout>
+
+
+    <View
+        android:id="@+id/video_tab_manager_line_2"
+        android:layout_width="0dp"
+        android:layout_height="1px"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="14dp"
+        android:background="?attr/smLineColor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/video_tab_manager_my_rv_layout" />
+
+    <TextView
+        android:id="@+id/video_tab_manager_tip_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="长按添加以下分类到我到分类中"
+        android:textColor="?attr/smSubHeadColor"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/video_tab_manager_line_2"
+        app:layout_constraintTop_toBottomOf="@+id/video_tab_manager_line_2" />
+
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@+id/video_tab_manager_tip_3"
+        app:layout_constraintRight_toRightOf="@+id/video_tab_manager_cancel"
+        app:layout_constraintTop_toBottomOf="@+id/video_tab_manager_tip_3">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/video_tab_manager_all_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/video_tab_manager_all_rv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="正在加载中..."
+            android:textColor="?attr/smContentColor" />
+    </FrameLayout>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="smToolbarBackgroundColor" format="reference|color" />
+    <attr name="smToolbarTitleColor" format="reference|color" />
+    <!--标题颜色-->
+    <attr name="smTitleColor" format="reference|color" />
+    <!--副标题颜色-->
+    <attr name="smSubHeadColor" format="reference|color" />
+    <!--tip颜色-->
+    <attr name="smTipColor" format="reference|color" />
+    <!--主内容文本颜色-->
+    <attr name="smContentColor" format="reference|color" />
+    <!--副文本颜色-->
+    <attr name="smSubContentColor" format="reference|color" />
+    <!--默认背景颜色-->
+    <attr name="smPageBackground" format="reference|color" />
+    <!--默认背景较深颜色-->
+    <attr name="smPageDarkBackground" format="reference|color" />
+    <!--浅颜色的分割线颜色-->
+    <attr name="smLineColor" format="reference|color" />
+</resources>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/smPageBackground"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:id="@+id/info_edit_savor_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_theme_bg_dark"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="头像"
+            android:textColor="?attr/smTitleColor"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/info_edit_savor"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_head_circle_default" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="?attr/smLineColor" />
+
+    <LinearLayout
+        android:id="@+id/info_edit_nick_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_theme_bg_dark"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="昵称"
+            android:textColor="?attr/smTitleColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/info_edit_nick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="7"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:lines="1"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="昵称"
+            android:textColor="?attr/smTipColor"
+            android:textSize="14sp" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_right_black_24dp"
+            android:tint="?attr/smLineColor" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:id="@+id/info_edit_id_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_theme_bg_dark"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="用户ID"
+            android:textColor="?attr/smTitleColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/info_edit_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="7"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:lines="1"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="昵称"
+            android:textColor="?attr/smTipColor"
+            android:textSize="14sp" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_right_black_24dp"
+            android:tint="?attr/smLineColor"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="?attr/smLineColor" />
+
+    <LinearLayout
+        android:id="@+id/info_edit_phone_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_theme_bg_dark"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="手机号码"
+            android:textColor="?attr/smTitleColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/info_edit_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="7"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:lines="1"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="昵称"
+            android:textColor="?attr/smTipColor"
+            android:textSize="14sp" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_right_black_24dp"
+            android:tint="?attr/smLineColor"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/smPageDarkBackground"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/info_edit_exit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="退出登录"
+            android:textColor="@color/text_red"
+            android:textSize="18sp" />
+    </FrameLayout>
+</LinearLayout>

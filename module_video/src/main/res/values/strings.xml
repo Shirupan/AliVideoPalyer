@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Module_video</string>
+
+    <string name="replay">重试</string>
+    <string name="tips_not_wifi">您当前处于数据流量网络,将会消耗您大量流量，是否确认继续播放？</string>
+    <string name="tips_not_wifi_cancel">停止</string>
+    <string name="tips_not_wifi_confirm">继续</string>
+</resources>

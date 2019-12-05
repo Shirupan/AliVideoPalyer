@@ -1,0 +1,129 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android'
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        // dex突破65535的限制
+        multiDexEnabled true
+
+        //默认
+        manifestPlaceholders = rootProject.ext.defaultHolder
+        flavorDimensions rootProject.ext.flavorDimensions
+
+        resConfigs "en", "zh"
+        ndk { abiFilters /*"armeabi",*/ "armeabi-v7a" }
+        // ndk { abiFilters /*"armeabi",*/ "x86" }
+
+    /*    android.applicationVariants.all { variant ->
+            //正常打包的时候指定打包路径和文件名
+            if (variant.buildType.name != "debug") {
+                //打包的文件名
+                def apkPath = "${applicationId}_v${versionName}_${variant.buildType.name}.apk"
+                //输出路径
+                def outputPath = project.rootDir.absolutePath + "\\${versionName}"
+                variant.getPackageApplication().outputDirectory = new File(outputPath)
+                variant.outputs.all {
+                    outputFileName = apkPath
+                }
+            }
+        }*/
+    }
+
+    signingConfigs {
+        release rootProject.ext.signing_sm
+        debug rootProject.ext.signing_sm
+    }
+
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            resValue "string", "app_name_build", "叉叉视频"
+            versionNameSuffix "-debug"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            manifestPlaceholders = [UMENG_CHANNEL_KEY      : "59eeda9407fe6548b500003b",
+                                    BaiduMobAd_APP_ID_VALUE: "e866cfb0"]
+        }
+
+        release {
+            signingConfig signingConfigs.release
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            resValue "string", "app_name_build", "叉叉视频"
+            zipAlignEnabled true
+            //   移除无用的resource文件
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            manifestPlaceholders = [UMENG_CHANNEL_KEY      : "5993a5dcc8957672050014ef",
+                                    BaiduMobAd_APP_ID_VALUE: "e866cfb0"]
+        }
+
+        configurations.all {
+            resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+        }
+    }
+    /*  productFlavors {
+          //避免legacy multidex带来的编译性能消耗(选值21以上)
+          "development" rootProject.ext.development
+          "offical" rootProject.ext.offical
+      }*/
+
+
+    //执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    dexOptions {
+        dexInProcess true
+        //最大堆内存
+        javaMaxHeapSize "4g"
+        //是否支持大工程模式
+        jumboMode = true
+        //预编译
+        preDexLibraries = true
+    }
+
+    aaptOptions {
+        cruncherEnabled = false
+    }
+
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            assets.srcDirs = ['assets', 'src/main/assets', 'src/main/assets/']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+}
+
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api project(':app_dependency')
+
+    //图片加载器
+    api rootProject.ext.real_dependencies.glide
+    kapt rootProject.ext.real_dependencies.glide_compiler
+
+}
+
+

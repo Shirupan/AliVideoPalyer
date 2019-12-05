@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/smPageDarkBackground">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/icon_me_sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_me_top_bg"
+                    app:layout_constraintBottom_toBottomOf="@+id/icon_me_top_line"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/icon_me_top_line"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/icon_me_savor" />
+
+                <ImageView
+                    android:id="@+id/icon_me_savor"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="55dp"
+                    android:src="@drawable/icon_head_circle_default"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/icon_me_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:lines="1"
+                    android:text="用户名"
+                    android:textColor="@color/text_33"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/icon_me_savor"
+                    app:layout_constraintLeft_toRightOf="@+id/icon_me_savor"
+                    app:layout_constraintTop_toTopOf="@+id/icon_me_savor" />
+
+                <LinearLayout
+                    android:id="@+id/me_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/icon_me_top_line">
+
+                    <TextView
+                        android:id="@+id/me_info_collect"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackground"
+                        android:drawableTop="@drawable/icon_me_shouchang"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="我的收藏"
+                        android:textColor="?attr/smTitleColor"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="?attr/smLineColor" />
+
+                    <TextView
+                        android:id="@+id/me_info_history"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackground"
+                        android:drawableTop="@drawable/icon_me_caina"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="历史浏览"
+                        android:textColor="?attr/smTitleColor"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="?attr/smLineColor" />
+
+                    <TextView
+                        android:id="@+id/me_info_zan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackground"
+                        android:drawableTop="@drawable/icon_me_fuwu"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="我的点赞"
+                        android:textColor="?attr/smTitleColor"
+                        android:textSize="13sp" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/me_tip_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:text="实用工具"
+                    android:textColor="?attr/smTitleColor"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/me_info_layout" />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/me_tool_rv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="16dp"
+                    app:layout_constraintLeft_toLeftOf="@+id/me_tip_1"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/me_tip_1" />
+
+
+                <TextView
+                    android:id="@+id/me_tip_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="40dp"
+                    android:text="测算工具"
+                    android:textColor="?attr/smTitleColor"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/me_tool_rv" />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/me_tool_rv_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="16dp"
+                    app:layout_constraintLeft_toLeftOf="@+id/me_tip_2"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/me_tip_2" />
+
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </FrameLayout>
+
+
+    <!--状态栏-->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/me_tool_bar_bg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:alpha="0.0"
+            android:background="?attr/smToolbarBackgroundColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/me_status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/me_tool_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/toolbar_height_size"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text=""
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/me_status_bar" />
+
+        <ImageView
+            android:id="@+id/me_tool_bar_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:background="?attr/selectableItemBackground"
+            android:padding="5dp"
+            android:src="@drawable/icon_me_setting"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/me_status_bar" />
+
+
+        <ImageView
+            android:id="@+id/me_tool_bar_kefu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:background="?attr/selectableItemBackground"
+            android:padding="5dp"
+            android:src="@drawable/icon_me_kefu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/me_tool_bar_setting"
+            app:layout_constraintTop_toBottomOf="@+id/me_status_bar"
+            app:layout_goneMarginRight="10dp" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+    }
+
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
+    api rootProject.ext.real_dependencies.appcompat_v7
+    api rootProject.ext.real_dependencies.support_v4
+    api rootProject.ext.real_dependencies.support_design
+    api rootProject.ext.real_dependencies.cardview_v7
+    api rootProject.ext.real_dependencies.constraint_layout
+    api rootProject.ext.real_dependencies.recyclerview_v7
+    api rootProject.ext.real_dependencies.multidex
+
+    api rootProject.ext.real_dependencies.okhttp
+    api rootProject.ext.real_dependencies.kotlin
+    api rootProject.ext.real_dependencies.packer_helper
+
+    api rootProject.ext.real_dependencies.gson
+
+    //针对Rxjava的不及时取消订阅而内存泄漏问题
+    api rootProject.ext.real_dependencies.rxlifecycle, {
+        exclude group: ['io.reactivex.rxjava2', 'com.android.support']
+    }
+    api rootProject.ext.real_dependencies.rxlifecycle_components, {
+        exclude group: ['io.reactivex.rxjava2', 'com.android.support']
+    }
+    api rootProject.ext.real_dependencies.rxActivityResult
+    api rootProject.ext.real_dependencies.rxjava
+    api rootProject.ext.real_dependencies.converter_gson
+
+
+    api rootProject.ext.real_dependencies.rxandroid
+    api rootProject.ext.real_dependencies.rxbinding, {
+        exclude group: ['io.reactivex.rxjava2', 'com.android.support']
+    }
+}

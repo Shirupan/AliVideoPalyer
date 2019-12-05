@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/smPageDarkBackground">
+
+
+    <FrameLayout
+        android:id="@+id/main_item_video_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/icon_default_vertical"
+        app:layout_constraintDimensionRatio="5:2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/main_item_video_savor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_video_mask" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:alpha="0.6"
+            android:rotation="180"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_video_mask" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/icon_main_play" />
+
+
+        <TextView
+            android:id="@+id/main_item_video_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="00:00"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/main_item_video_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="标题文字"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/main_item_collect"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/main_item_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="14dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/icon_main_diandian"
+        android:tint="@color/line_f2"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/main_item_video_title" />
+
+    <ImageView
+        android:id="@+id/main_item_collect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="14dp"
+        android:src="@drawable/icon_main_shouchang"
+        android:tint="@color/line_f2"
+        app:layout_constraintRight_toLeftOf="@+id/main_item_more"
+        app:layout_constraintTop_toTopOf="@+id/main_item_more"
+        app:layout_goneMarginRight="15dp" />
+
+    <TextView
+        android:id="@+id/main_item_video_look"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/icon_main_look_count"
+        android:drawablePadding="5dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:text="0"
+        android:textColor="?attr/smContentColor"
+        android:textSize="13sp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/main_item_video_share"
+        app:layout_constraintTop_toBottomOf="@+id/main_item_video_layout" />
+
+    <TextView
+        android:id="@+id/main_item_video_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_main_share"
+        android:drawablePadding="5dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:text="0"
+        android:textColor="?attr/smContentColor"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toRightOf="@+id/main_item_video_look"
+        app:layout_constraintRight_toLeftOf="@+id/main_item_video_zan"
+        app:layout_constraintTop_toTopOf="@+id/main_item_video_look" />
+
+
+    <TextView
+        android:id="@+id/main_item_video_zan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:drawableLeft="@drawable/icon_main_zan"
+        android:drawablePadding="5dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:text="0"
+        android:textColor="?attr/smContentColor"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toRightOf="@+id/main_item_video_share"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/main_item_video_look" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="5dp"
+        android:background="?attr/smPageBackground"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_item_video_look" />
+</android.support.constraint.ConstraintLayout>

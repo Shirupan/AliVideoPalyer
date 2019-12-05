@@ -1,0 +1,36 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+    }
+    buildTypes {
+        release {}
+        yansheng {}
+        debug {}
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs,src/main/libs')
+    implementation rootProject.ext.real_dependencies.appcompat_v7
+    api rootProject.ext.real_dependencies.xinge
+    api rootProject.ext.real_dependencies.jg
+    api rootProject.ext.real_dependencies.wup
+    api rootProject.ext.real_dependencies.mid
+    api rootProject.ext.real_dependencies.xghw
+    api rootProject.ext.real_dependencies.mipush
+    api rootProject.ext.real_dependencies.xgmz
+}

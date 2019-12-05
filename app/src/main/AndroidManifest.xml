@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xx.video_dev"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 友盟权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name="com.xx.video_dev.app.MyApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+
+        android:theme="@style/SmTheme.Day"
+        android:usesCleartextTraffic="true">
+
+        <!-- 百度SDK -->
+        <meta-data
+            android:name="BaiduMobAd_APP_ID"
+            android:value="${BaiduMobAd_APP_ID_VALUE}" />
+
+        <meta-data
+            android:name="QQ_APPID"
+            android:value="${QQ_APPID_VALUE}" />
+        <meta-data
+            android:name="QQ_KEY"
+            android:value="${QQ_SECRET_VALUE}" />
+
+        <meta-data
+            android:name="WX_APPID"
+            android:value="${WX_APPID_VALUE}" />
+        <meta-data
+            android:name="WX_KEY"
+            android:value="${WX_SECRET_VALUE}" />
+
+        <meta-data
+            android:name="WB_APPID"
+            android:value="${WB_APPID_VALUE}" />
+        <meta-data
+            android:name="WB_KEY"
+            android:value="${WB_SECRET_VALUE}" />
+
+
+        <meta-data
+            android:name="META_BUYLG_APPID"
+            android:value="${BUYLG_APP_ID}" />
+        <meta-data
+            android:name="META_BUYLG_APP_KEY"
+            android:value="${BUYLG_APP_KEY}" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="${UMENG_APPID}" />
+
+
+        <meta-data
+            android:name="HW_APPID_KEY"
+            android:value="${HW_APPID}" />
+        <meta-data
+            android:name="XIAOMI_PUSH_APPID_KEY"
+            android:value="${XIAOMI_PUSH_APPID}" />
+        <meta-data
+            android:name="XIAOMI_PUSH_APPKEY_KEY"
+            android:value="${XIAOMI_PUSH_APPKEY}" />
+        <meta-data
+            android:name="MEIZU_PUSH_APPID_KEY"
+            android:value="${MEIZU_PUSH_APPID}" />
+        <meta-data
+            android:name="MEIZU_PUSH_APPKEY_KEY"
+            android:value="${MEIZU_PUSH_APPKEY}" />
+
+        <activity
+            android:name="com.xx.video_dev.view.SplashActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/splash_view"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.xx.video_dev.view.RouterActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@style/Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="xxvideo" />
+                <data android:host="xx.xx.com" />
+                <data android:pathPattern=".*" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent${QQ_APPID_VALUE}" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

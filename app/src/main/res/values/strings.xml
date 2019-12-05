@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">@string/app_name_build</string>
+    <string name="buy_price">(%1d元/本)</string>
+    <string name="item_home">叉叉</string>
+    <string name="item_list">推荐</string>
+    <string name="item_qiwen">奇闻</string>
+    <string name="item_happy">娱乐</string>
+    <string name="item_my">我的</string>
+
+
+</resources>

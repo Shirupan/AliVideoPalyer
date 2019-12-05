@@ -1,0 +1,22 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xx.app.dependendy">
+
+
+    <application>
+
+        <activity
+            android:name="com.xx.app.dependendy.view.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+
+        <receiver android:name="com.xx.app.dependendy.service.GlobalNoticeBroadCastReceiver">
+
+            <intent-filter>
+                <action android:name="com.mrkj.global.PUSH_MESSAGE" />
+            </intent-filter>
+
+        </receiver>
+    </application>
+</manifest>

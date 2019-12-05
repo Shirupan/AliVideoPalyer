@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Module_me</string>
+    <string name="setting_version_s">version %s</string>
+</resources>
